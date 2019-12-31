@@ -1,4 +1,4 @@
 # CCR-HW
-Board/schematic/gerber files for the CCR project
+Board/schematic/gerber files for the CCR-HP project
 
-Details here: http://rev0.net/index.php?title=CCR
+Details here: http://rev0.net/index.php?title=CCR-HP
