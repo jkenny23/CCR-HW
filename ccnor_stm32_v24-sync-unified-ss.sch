@@ -14044,6 +14044,7 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="C9" library="resistor" deviceset="CPOL-US" device="E2.5-7" value="470u"/>
 <part name="C32" library="resistor" deviceset="CPOL-US" device="E2.5-7" value="470u"/>
 <part name="C35" library="resistor" deviceset="CPOL-US" device="E2.5-7" value="470u"/>
+<part name="U13" library="custom" deviceset="TL431" device="TO92"/>
 </parts>
 <sheets>
 <sheet>
@@ -14165,7 +14166,7 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="C25" gate="G$1" x="215.9" y="119.38"/>
 <instance part="SUPPLY21" gate="GND" x="215.9" y="109.22"/>
 <instance part="U9" gate="U1" x="205.74" y="116.84"/>
-<instance part="SUPPLY22" gate="GND" x="205.74" y="106.68"/>
+<instance part="SUPPLY22" gate="GND" x="205.74" y="101.6"/>
 <instance part="SUPPLY2" gate="GND" x="76.2" y="20.32"/>
 <instance part="J1" gate="J1" x="-10.16" y="149.86"/>
 <instance part="SUPPLY3" gate="GND" x="-2.54" y="144.78"/>
@@ -14372,6 +14373,7 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <instance part="C9" gate="G$1" x="17.78" y="22.86"/>
 <instance part="C32" gate="G$1" x="292.1" y="22.86"/>
 <instance part="C35" gate="G$1" x="340.36" y="22.86"/>
+<instance part="U13" gate="U1" x="208.28" y="114.3"/>
 </instances>
 <busses>
 </busses>
@@ -14427,7 +14429,12 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="U9" gate="U1" pin="A"/>
 <pinref part="SUPPLY22" gate="GND" pin="GND"/>
-<wire x1="205.74" y1="109.22" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="104.14" x2="205.74" y2="106.68" width="0.1524" layer="91"/>
+<pinref part="U13" gate="U1" pin="A"/>
+<wire x1="205.74" y1="106.68" x2="205.74" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="106.68" x2="208.28" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="106.68" x2="208.28" y2="109.22" width="0.1524" layer="91"/>
+<junction x="205.74" y="106.68"/>
 </segment>
 <segment>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
@@ -15040,7 +15047,8 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <wire x1="205.74" y1="124.46" x2="205.74" y2="127" width="0.1524" layer="91"/>
 <junction x="205.74" y="124.46"/>
 <pinref part="C25" gate="G$1" pin="1"/>
-<wire x1="205.74" y1="124.46" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="205.74" y1="124.46" x2="208.28" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="124.46" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="124.46" x2="215.9" y2="121.92" width="0.1524" layer="91"/>
 <wire x1="215.9" y1="124.46" x2="218.44" y2="124.46" width="0.1524" layer="91"/>
 <label x="218.44" y="124.46" size="1.27" layer="95" xref="yes"/>
@@ -15054,6 +15062,13 @@ Standard 1-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <junction x="205.74" y="124.46"/>
 <pinref part="TP12" gate="TP1" pin="1"/>
 <wire x1="215.9" y1="127" x2="215.9" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U13" gate="U1" pin="K"/>
+<wire x1="208.28" y1="119.38" x2="208.28" y2="124.46" width="0.1524" layer="91"/>
+<pinref part="U13" gate="U1" pin="REF"/>
+<wire x1="203.2" y1="114.3" x2="198.12" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="114.3" x2="198.12" y2="116.84" width="0.1524" layer="91"/>
+<junction x="198.12" y="116.84"/>
+<junction x="208.28" y="124.46"/>
 </segment>
 <segment>
 <pinref part="R16" gate="G$1" pin="2"/>
